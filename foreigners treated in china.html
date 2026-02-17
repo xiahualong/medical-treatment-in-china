@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Medical China - For Foreigners</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* 顶部LOGO栏 */
+        .top-bar {
+            background: #0d47a1;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        h1 {
+            color: #0d47a1;
+            font-size: 26px;
+        }
+        .subtitle {
+            color: #555;
+            font-size: 16px;
+        }
+
+        /* 左右布局 */
+        .main {
+            display: flex;
+            gap: 20px;
+        }
+        .left {
+            flex: 1;
+        }
+        .right {
+            flex: 1;
+        }
+
+        .box {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .box h2 {
+            color: #0d47a1;
+            margin-bottom: 12px;
+            font-size: 18px;
+            border-left: 4px solid #0d47a1;
+            padding-left: 10px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+
+        /* 聊天框 */
+        .chat-box {
+            border: 1px solid #eee;
+            height: 280px;
+            padding: 12px;
+            background: #fafafa;
+            border-radius: 8px;
+            overflow-y: auto;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .input-area {
+            display: flex;
+            gap: 8px;
+        }
+        input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+        button {
+            padding: 10px 16px;
+            background: #0d47a1;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .city {
+            font-weight: bold;
+            color: #0d47a1;
+            margin-top: 6px;
+        }
+
+        /* 联系方式 */
+        .contact {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .contact p {
+            margin-bottom: 5px;
+        }
+
+        .disclaimer {
+            text-align: center;
+            font-size: 12px;
+            color: #888;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- 顶部 LOGO 区域 -->
+<div class="top-bar">
+    Global Medical China
+</div>
+
+<div class="container">
+    <header>
+        <h1>Medical Service for Foreigners in China</h1>
+        <p class="subtitle">AI Health Assistant | Professional Medical Support</p>
+    </header>
+
+    <div class="main">
+        <!-- 左边 -->
+        <div class="left">
+            <div class="box">
+                <h2>About Our Service</h2>
+                <p>We are a professional medical service team for foreigners. We provide AI health consultation, hospital recommendation, registration guidance, translation, and one-stop medical support in China.</p>
+            </div>
+
+            <div class="box">
+                <h2>Problems Foreigners Face</h2>
+                <ul>
+                    <li>High medical cost in many countries</li>
+                    <li>Long waiting time for treatment</li>
+                    <li>Language barriers with doctors</li>
+                    <li>Unclear hospital and registration process</li>
+                    <li>Difficulty in getting timely help</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h2>Why Choose China for Treatment</h2>
+                <ul>
+                    <li>✅ High-quality & advanced medical technology</li>
+                    <li>✅ Fast service & short waiting time</li>
+                    <li>✅ High cost-performance & lower fees</li>
+                    <li>✅ Safe, standardized & reliable hospitals</li>
+                    <li>✅ International clinics with English service</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h2>Our Suggestion</h2>
+                <p>China is one of the best choices for safe, fast, and affordable medical treatment. We help you from the first step to full recovery.</p>
+                <p>Use our AI assistant to check your health now.</p>
+            </div>
+        </div>
+
+        <!-- 右边 -->
+        <div class="right">
+            <div class="box">
+                <h2>AI Health Assistant</h2>
+                <div class="chat-box" id="chat">
+                    AI: Hello! Please describe your symptoms in English.<br>
+                    Example: I have a fever, cough, headache...
+                </div>
+                <div class="input-area">
+                    <input type="text" id="question" placeholder="Type your symptoms...">
+                    <button onclick="sendQuestion()">Send</button>
+                </div>
+            </div>
+
+            <div class="box">
+                <h2>Recommended International Hospitals</h2>
+                <div class="city">Beijing</div>
+                <ul>
+                    <li>Beijing United Family Hospital</li>
+                    <li>Beijing International Medical Center</li>
+                </ul>
+                <div class="city">Shanghai</div>
+                <ul>
+                    <li>Shanghai United Family Hospital</li>
+                    <li>ParkwayHealth Shanghai</li>
+                </ul>
+                <div class="city">Guangzhou</div>
+                <ul>
+                    <li>Guangzhou United Family Hospital</li>
+                </ul>
+                <div class="city">Nanjing</div>
+                <ul>
+                    <li>Nanjing International Medical Center</li>
+                    <li>Jiangsu Provincial People’s Hospital (International Clinic)</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h2>How to See a Doctor in China</h2>
+                <ul>
+                    <li>1. Prepare passport</li>
+                    <li>2. Register (Guahao)</li>
+                    <li>3. Wait for your turn</li>
+                    <li>4. See the doctor</li>
+                    <li>5. Pay and get medicine</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h2>Contact Us</h2>
+                <div class="contact">
+                    <p>📞 Phone: +86 138 0000 0000</p>
+                    <p>📧 Email: service@globalmedicalchina.com</p>
+                    <p>📍 Service: Beijing / Shanghai / Guangzhou / Nanjing</p>
+                    <p>🌍 Website: www.globalmedicalchina.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="disclaimer">
+        Disclaimer: This AI assistant is for reference only.<br>
+        For emergency, please call 120 or go to hospital immediately.
+    </div>
+</div>
+
+<script>
+function sendQuestion() {
+    let input = document.getElementById("question");
+    let chat = document.getElementById("chat");
+    let text = input.value.trim().toLowerCase();
+    if (text === "") return;
+
+    chat.innerHTML += "<br><br><b>You:</b> " + text;
+    let reply = "";
+
+    if (text.includes("fever") || text.includes("hot")) {
+        reply = "You may have a cold or flu.<br>" +
+                "- Drink warm water and rest.<br>" +
+                "- Monitor your temperature.<br>" +
+                "- Go to hospital if over 39°C.";
+    } else if (text.includes("cough") || text.includes("throat")) {
+        reply = "This is often throat or airway issue.<br>" +
+                "- Avoid cold drinks and smoke.<br>" +
+                "- Honey water helps sore throat.<br>" +
+                "- See a doctor if it lasts over 1 week.";
+    } else if (text.includes("headache") || text.includes("dizzy")) {
+        reply = "Headache often from tiredness or cold.<br>" +
+                "- Rest in quiet room.<br>" +
+                "- Avoid strong light and noise.<br>" +
+                "- Go to hospital if very painful.";
+    } else if (text.includes("stomach") || text.includes("diarrhea")) {
+        reply = "May be food or stomach cold.<br>" +
+                "- Drink warm water, no cold/spicy food.<br>" +
+                "- Eat porridge or light food.<br>" +
+                "- Go to hospital if severe pain.";
+    } else {
+        reply = "Please rest and drink warm water.<br>" +
+                "If you feel serious, go to international hospital.";
+    }
+
+    chat.innerHTML += "<br><b>AI:</b> " + reply;
+    input.value = "";
+    chat.scrollTop = chat.scrollHeight;
+}
+</script>
